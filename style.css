@@ -12,7 +12,6 @@ Tags: light, accessibility-ready
 Text Domain: planet4-child-theme-thailand
 */
 
-/*
-	Display which theme is active right now in bottom right corner
-	See also planet4-child-theme-thailand. Feel free to drop or hide display
-*/
+@import 'css/_roboto.css';
+@import 'css/_lora.css';
+
