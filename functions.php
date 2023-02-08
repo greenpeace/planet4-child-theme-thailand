@@ -11,3 +11,14 @@ function enqueue_child_styles() {
 
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
+
+// Set `thai` tokenizer for ElasticSearch indexation 
+add_filter(
+    'ep_config_mapping',
+    function ($mapping) {
+        $mapping['settings']['analysis']['analyzer']['default']['tokenizer'] = 'thai';
+        return $mapping;
+    },
+    99,
+    1
+);
